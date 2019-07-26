@@ -11,3 +11,7 @@ apt install ansible git -y
 
 # 3. clone rpcw source
 git clone https://github.com/psunix/rpcw.git /opt/rpcw
+
+# 4. execute ansible
+
+ansible-playbook /opt/rpcw/ansible/rpcw.yml --ask-become-pass

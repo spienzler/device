@@ -1,0 +1,13 @@
+---
+
+- lineinfile:
+    path: /boot/config.txt
+    line: 'start_x=1'
+
+- lineinfile:
+    path: /boot/config.txt
+    line: 'gpu_mem=128'
+
+- lineinfile:
+    path: /boot/config.txt
+    line: 'disable_camera_led=1'

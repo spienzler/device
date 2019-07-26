@@ -1,0 +1,6 @@
+---
+
+- name: raspberry pi camera and weather station
+  hosts: localhost
+  roles:
+    - { role: camera, tags: ['camera'] }
