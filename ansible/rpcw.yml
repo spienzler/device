@@ -1,6 +1,6 @@
 ---
-
 - name: raspberry pi camera and weather station
   hosts: localhost
   roles:
+    - { role: general, tags: ['general'] }
     - { role: camera, tags: ['camera'] }
