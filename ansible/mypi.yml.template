@@ -1,4 +1,4 @@
 ---
-autossh-remote-host: jump.example.com
-autossh-remote-port: 22
-autossh-remote-user: dude
+autossh_remote_host: jump.example.com
+autossh_remote_port: 22
+autossh_remote_user: dude

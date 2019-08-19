@@ -14,4 +14,4 @@ git clone https://github.com/psunix/rpcw.git /opt/rpcw
 
 # 4. execute ansible
 
-ansible-playbook /opt/rpcw/ansible/rpcw.yml
+ansible-playbook /opt/rpcw/ansible/rpcw.yml --extra-vars "@/opt/rpcw/ansible/mypi.yml"
