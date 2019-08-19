@@ -1,4 +1,7 @@
 ---
+- name: add host config
+  include_vars: mypi.yaml
+
 - name: raspberry pi camera and weather station
   hosts: localhost
   roles:

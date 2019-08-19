@@ -1,0 +1,19 @@
+---
+- name: add autossh user
+  user:
+    name: autossh
+    generate_ssh_key: yes
+    shell: /bin/false
+
+- name: install autossh
+  apt: pkg=autossh state=latest
+
+- name: create autossh daemon config
+  template:
+    src: autossh.service
+    dest: /etc/systemd/system/autossh.service
+
+- name: start autossh service
+  service: autossh
+    state: started
+    enabled: yes
