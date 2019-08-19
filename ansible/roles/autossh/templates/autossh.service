@@ -1,13 +1,18 @@
-[Unit] 
-Description=Keep ssh tunnel to remote ssh server open
-After=network.target
+[Install]
+WantedBy=multi-user.target
+
+[Unit]
+Description=autossh
+Wants=network-online.target
+After=network-online.target
 
 [Service]
-Type=forking
+Type=simple
 User=autossh
-ExecStart=/usr/bin/autossh -f -M 0 -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=false -p {{ autossh_remote_port }} {{ autossh_remote_user }}@{{ autossh_remote_host }} -R 4222:127.0.0.1:22
-ExecStop=/usr/bin/pkill -9 -u autotunnel
+ExecStart=/usr/bin/autossh -M 22000 -N -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=false -p {{ autossh_remote_port }} {{ autossh_remote_user }}@{{ autossh_remote_host }} -R 4222:127.0.0.1:22
 Restart=always
+RestartSec=60
+ExecStop=/usr/bin/pkill -9 -u autossh
 
 [Install]
 WantedBy=multi-user.target

@@ -13,6 +13,9 @@
     src: autossh.service
     dest: /etc/systemd/system/autossh.service
 
+- name: reload systemd changes
+  shell: systemctl daemon-reload
+
 - name: start autossh service
   service:
     name: autossh
