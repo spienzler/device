@@ -3,9 +3,6 @@ server {
   access_log  /var/log/nginx/access.log;
   error_log  /var/log/nginx/error.log;
   root   /srv/www/;
-  location / {
-    index.html;
-  }
   location /cam {
     autoindex on;
   }
