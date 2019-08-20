@@ -5,3 +5,8 @@
     minute: "*/5"
     hour: "6-22"
     job: "/opt/rpcw/app/run.sh"
+
+- name: create folder for camera pictures
+  file:
+    path: /srv/www/cam/0
+    state: directory
