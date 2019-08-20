@@ -1,0 +1,7 @@
+---
+- name: RPCW main script
+  cron:
+    name: "rpcw main script"
+    minute: "*/5"
+    hour: "6-22"
+    job: "/opt/rpcw/app/run.sh"
