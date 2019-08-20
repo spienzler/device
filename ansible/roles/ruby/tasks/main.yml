@@ -1,0 +1,3 @@
+---
+- name: install ruby
+  apt: pkg=ruby2.5 state=latest

@@ -6,3 +6,4 @@
     - { role: autossh, tags: ['autossh'] }
     - { role: camera, tags: ['camera'] }
     - { role: nginx, tags: ['nginx'] }
+    - { role: ruby, tags: ['ruby'] }
