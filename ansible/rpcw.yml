@@ -5,3 +5,4 @@
     - { role: general, tags: ['general'] }
     - { role: autossh, tags: ['autossh'] }
     - { role: camera, tags: ['camera'] }
+    - { role: nginx, tags: ['nginx'] }
