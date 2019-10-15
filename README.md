@@ -1,4 +1,4 @@
-# rpcw
+# Spienzler
 raspberry cam and weather station
 
 ## Install
