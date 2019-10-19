@@ -1,0 +1,7 @@
+label: My Home
+
+upload:
+  webdav:
+    user: bla
+    password: 1245
+    url: https://your-webdav-server/path
