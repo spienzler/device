@@ -1,4 +1,4 @@
-# Spienzler
+# <o> Spienzler
 raspberry cam and weather station
 
 ## Install
