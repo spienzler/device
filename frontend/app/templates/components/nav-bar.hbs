@@ -1,3 +1,26 @@
-<nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">&#60;o&#62; Spienzler</a>
-</nav>
+{{cams}}
+<BsNavbar
+  @type="dark"
+  @backgroundColor="primary"
+  @collapsed={{true}}
+  @onCollapse={{action (mut collapsed) true}}
+  @onExpand={{action (mut collapsed) false}} as |navbar|>
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}&#60;o&#62; Spienzler{{/link-to}}
+  </div>
+  <navbar.content>
+    <navbar.nav as |nav|>
+      <nav.dropdown as |dd|>
+        <dd.toggle>Dropdown <span class="caret"></span></dd.toggle>
+        <dd.menu as |ddm|>
+          {{#each this.cams as |cam|}}
+          <ddm.item>
+            <ddm.link-to @route="cam">{{cam.label}}</ddm.link-to>
+          </ddm.item>
+          {{/each}}
+        </dd.menu>
+      </nav.dropdown>
+    </navbar.nav>
+  </navbar.content>
+</BsNavbar>

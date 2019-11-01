@@ -2,24 +2,26 @@
   "links": {
     "self": "https://example.com/cams"
   },
-  "data": [{
-    "type": "cams",
-    "id": "1",
-    "attributes": {
-      "label": "Bietschhorn",
-      "description": "view on the beautiful Bietschhorn",
-      "active_years": [2019, 2020],
-      "latest_shot_day": "11-11"
+  "data": [
+    {
+      "type": "cams",
+      "id": "1",
+      "attributes": {
+        "label": "Bietschhorn",
+        "description": "view on the beautiful Bietschhorn",
+        "active_years": [2019, 2020],
+        "latest-shot-day": "11-11"
+      }
+    },
+    {
+      "type": "cams",
+      "id": "2",
+      "attributes": {
+        "label": "Jägisand",
+        "description": "view on Jägisand",
+        "active_years": [2020],
+        "latest-shot-day": "11-11"
+      }
     }
-  }, {
-    "type": "cams",
-    "id": "2",
-    "attributes": {
-      "label": "Jägisand",
-      "description": "view on Jägisand",
-      "active_years": [2020],
-      "latest_shot_date": "11-11"
-    }
-  }]
+  ]
 }
-
