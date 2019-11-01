@@ -1,0 +1,19 @@
+{
+  "links": {
+    "self": "https://example.com/cams/1/2019.json"
+  },
+  "data": [{
+    "type": "shot_days",
+    "id": "11-11",
+    "attributes": {
+      "count": "15"
+    }
+  }, {
+    "type": "shot_days",
+    "id": "11-10",
+    "attributes": {
+      "count": "23"
+    }
+  }]
+}
+

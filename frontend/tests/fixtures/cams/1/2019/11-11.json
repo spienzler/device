@@ -1,0 +1,15 @@
+{
+  "links": {
+    "self": "https://example.com/cams/1/2019/11-11.json"
+  },
+  "data": [{
+    "type": "shots",
+    "id": "12:00",
+    "attributes": {}
+  }, {
+    "type": "shots",
+    "id": "12:15",
+    "attributes": {}
+  }]
+}
+
