@@ -1,4 +1,3 @@
-{{cams}}
 <BsNavbar
   @type="dark"
   @backgroundColor="primary"
@@ -12,12 +11,12 @@
   <navbar.content>
     <navbar.nav as |nav|>
       <nav.dropdown as |dd|>
-        <dd.toggle>Dropdown <span class="caret"></span></dd.toggle>
+        <dd.toggle>Webcams <span class="caret"></span></dd.toggle>
         <dd.menu as |ddm|>
-          {{#each this.cams as |cam|}}
-          <ddm.item>
-            <ddm.link-to @route="cam">{{cam.label}}</ddm.link-to>
-          </ddm.item>
+          {{#each cams as |cam|}}
+            <ddm.item>
+              <ddm.linkTo @route="index">{{cam.label}}</ddm.linkTo>
+            </ddm.item>
           {{/each}}
         </dd.menu>
       </nav.dropdown>
