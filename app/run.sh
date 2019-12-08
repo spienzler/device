@@ -5,7 +5,7 @@ require 'yaml'
 
 BASE_DIR='/srv/www/cam/0'
 
-settings = YAML.load(File.read(File.dirname($0) + '/spienzler.yaml'))
+config = YAML.load(File.read(File.dirname($0) + '/config.yaml'))
 
 today = Date.today.to_s
 now = Time.now.strftime('%H-%M')
@@ -15,7 +15,7 @@ system("raspistill -rot 180 -o #{img_file_path}")
 #system("touch #{img_file_path}")
 
 # webdav upload
-wd_config = settings['upload']['webdav']
+wd_config = config['upload']['webdav']
 wd_cmd = "curl --user #{wd_config['user']}:#{wd_config['password']} -T #{img_file_path} #{wd_config['url']}/#{img_file_name}"
 %x[#{wd_cmd}]
 
