@@ -1,0 +1,8 @@
+language: ruby
+cache: bundler
+rvm:
+ - 2.5
+ - bundle install --path vendor/bundle
+script:
+ - bundle --deployment
+ - bundle exec rake ci --trace
