@@ -7,4 +7,4 @@
     - { role: camera, tags: ['camera'] }
     - { role: nginx, tags: ['nginx'] }
     - { role: ruby, tags: ['ruby'] }
-    - { role: rpcw-app, tags: ['rpcw-app'] }
+    - { role: spienzler, tags: ['spienzler'] }
