@@ -13,5 +13,6 @@ apt install ansible git -y
 git clone https://github.com/spienzler/device.git /opt/spienzler
 
 # 4. execute ansible
-
-ansible-playbook /opt/spienzler/ansible/spienzler.yml --extra-vars "@/opt/spienzler/ansible/mypi.yml"
+ANSIBLE_DIR=/opt/spienzler/ansible
+cp -n $ANSIBLE_DIR/mypi.yml.template $ANSIBLE_DIR/mypi.yml
+ansible-playbook /opt/spienzler/ansible/spienzler.yml --extra-vars "@$ANSIBLE_DIR/mypi.yml"
