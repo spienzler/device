@@ -1,5 +1,5 @@
 # \<o> Spienzler
-raspberry cam and weather station
+raspberry pi cam and weather station
 
 ## Install
 
