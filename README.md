@@ -12,4 +12,4 @@ raspberry cam and weather station
 
 ### Spienzler
 
-source <(curl -s https://raw.githubusercontent.com/spienzler/device/master/bin/init.sh)
+login as root and execute: `source <(curl -s https://raw.githubusercontent.com/spienzler/device/master/bin/init.sh)`
