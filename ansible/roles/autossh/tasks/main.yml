@@ -9,17 +9,17 @@
   apt: pkg=autossh state=latest
 
 - name: create autossh daemon config
-  when: autossh_remote_host
+  when: autossh_remote_host is defined
   template:
     src: autossh.service
     dest: /etc/systemd/system/autossh.service
 
 - name: reload systemd changes
-  when: autossh_remote_host
+  when: autossh_remote_host is defined
   shell: systemctl daemon-reload
 
 - name: start autossh service
-  when: autossh_remote_host
+  when: autossh_remote_host is defined
   service:
     name: autossh
     state: started
