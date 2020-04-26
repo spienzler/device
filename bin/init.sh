@@ -10,8 +10,8 @@ apt update
 apt install ansible git -y
 
 # 3. clone rpcw source
-git clone https://github.com/psunix/rpcw.git /opt/rpcw
+git clone https://github.com/spienzler/device.git /opt/spienzler
 
 # 4. execute ansible
 
-ansible-playbook /opt/rpcw/ansible/rpcw.yml --extra-vars "@/opt/rpcw/ansible/mypi.yml"
+ansible-playbook /opt/spienzler/ansible/spienzler.yml --extra-vars "@/opt/spienzler/ansible/mypi.yml"
