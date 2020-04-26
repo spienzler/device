@@ -1,16 +1,21 @@
 #!/bin/bash
 
-# 1. add ansible
+SPIENZLER_DIR=/opt/spienzler
+
+if [ -d "$SPIENZLER_DIR" ]; then
+  echo "spienzler seems to be initialized already."
+  echo "run 'spienzler update' to update to most recent version"
+  exit 1
+fi
+
+# add ansible
 echo 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main' > /etc/apt/sources.list.d/ansible
-
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
-
-# 2. install pkgs
 apt update
 apt install ansible git -y
 
-# 3. clone rpcw source
-git clone https://github.com/spienzler/device.git /opt/spienzler
+# clone spienzler devise source
+git clone https://github.com/spienzler/device.git $SPIENZLER_DIR
 
-# 4. execute ansible
+# execute ansible
 ansible-playbook /opt/spienzler/ansible/spienzler.yml
