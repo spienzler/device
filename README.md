@@ -12,4 +12,4 @@ raspberry cam and weather station
 
 ### Spienzler
 
-source <(https://raw.githubusercontent.com/psunix/rpcw/master/bin/init.sh)
+source <(https://raw.githubusercontent.com/spienzler/device/master/bin/init.sh)
