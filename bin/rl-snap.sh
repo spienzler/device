@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source rl.env
+source $(dirname $0)/rl.env
 
 # login
 JSON=$(curl -s -d "[{\"cmd\":\"Login\",\"action\":0,\"param\":{\"rs\": \"abcd\", \"User\":{\"userName\":\"$USER\",\"password\":\"$PW\"}}}]" $HOST/api.cgi?cmd=Login)
