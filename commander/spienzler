@@ -4,7 +4,7 @@ require 'date'
 require 'yaml'
 
 BASE_DIR='/srv/www/cam/0'
-RL_SNAP_CMD=File.expand_path(__dir__).chomp('/commander') + '/bin/rl-snap.sh'
+RL_SNAP_CMD=File.expand_path(__dir__).chomp('/commander') + '/bin/rl-snap.rb'
 
 config = YAML.load(File.read(File.dirname($0) + '/config.yaml'))
 
